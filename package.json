@@ -4,10 +4,10 @@
   "description": "Notes API - Backend Intern Task using Node.js, TypeScript, and MongoDB",
   "main": "index.js",
   "scripts": {
-  "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-  "build": "tsc",
-  "start": "node dist/server.js"
-},
+    "dev": "nodemon --watch src --exec ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MoamenEl-Sayed95/Personal-Notes-API-Project.git"
@@ -28,6 +28,8 @@
   "devDependencies": {
     "@types/express": "^5.0.3",
     "@types/node": "^24.1.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
   }
