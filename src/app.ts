@@ -4,12 +4,15 @@ import noteRoutes from './routes/note.routes';
 import errorHandler from './middlewares/errorHandler';
 import notFound from './middlewares/notFound';
 
+// Create Express app
 const app = express();
 
 // Middlewares
 app.use(express.json());
 
+// Log incoming requests
 app.use(logger);
+
 // Routes
 app.use('/api/notes', noteRoutes);
 
