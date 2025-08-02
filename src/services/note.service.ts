@@ -25,5 +25,9 @@ export const updateNote = async (id: string, data: Partial<INote>) => {
 };
 
 export const deleteNote = async (id: string) => {
-  return await Note.findByIdAndDelete(id);
+  return await Note.findByIdAndUpdate(
+    id,
+    { isDeleted: true },
+    { new: true }
+  );
 };
